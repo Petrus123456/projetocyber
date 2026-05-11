@@ -41,21 +41,16 @@ Armazenamento: 70GB Livres
 
 ## 💻 Pré-requisitos Software
 
+O sistema operacional que usamos é o UBUNTU 20.4 ou SUPERIOR, mas pode ser
+usado também o UBUNTU WSL nativo do WIN 10 e WIN 11.
+
 ## 🚀 Instalando <nome_do_projeto>
 
 Para instalar o <nome_do_projeto>, siga estas etapas:
 
 Linux:
 
-```
-Linux (Ubuntu 20.04 ou superior)
-```
-
 Windows:
-
-```
-<comando_de_instalação>
-```
 
 ## ☕ Usando <nome_do_projeto>
 
@@ -87,7 +82,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#" title="defina o título do link">
-        <img src="https://avatars3.githubusercontent.com/u/31936044" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
+        <img src="https://github.com/Petrus123456" width="100px;" alt="Foto do Iuri Silva no GitHub"/><br>
         <sub>
           <b>Iuri Silva</b>
         </sub>
@@ -111,6 +106,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
   </tr>
 </table>
+
 
 ## 😄 Seja um dos contribuidores
 
