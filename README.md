@@ -22,7 +22,6 @@ O projeto ainda está em desenvolvimento e as próximas atualizações serão vo
 - [x] Map Flow Infra
 - [x] Levantar DVWA
 - [ ] Levantar Attacker
-- [ ] 
 - [ ] ReadMe
 - [ ] 
 - [ ] Tarefa 5
