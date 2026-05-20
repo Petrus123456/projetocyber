@@ -56,6 +56,7 @@ Windows:
 Para usar <nome_do_projeto>, siga estas etapas:
 
 ```
+
 <exemplo_de_uso>
 ```
 
@@ -98,9 +99,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 </table>
 
 
-## 😄 Seja um dos contribuidores
-
-Quer fazer parte desse projeto? Clique [AQUI](CONTRIBUTING.md) e leia como contribuir.
 
 ## 📝 Licença
 
