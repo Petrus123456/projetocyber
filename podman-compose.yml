@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+  dvwa:
+    image: vulnerables/web-dvwa
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - lab_net
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dvwa
+      MYSQL_USER: dvwa
+      MYSQL_PASSWORD: dvwa
+    networks:
+      - lab_net
+
+  attacker:
+    image: ubuntu:20.04
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    networks:
+      - lab_net
+
+networks:
+  lab_net:
