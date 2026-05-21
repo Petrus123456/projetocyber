@@ -1,0 +1,42 @@
+version: "3"
+
+services:
+  dvwa:
+    image: vulnerables/web-dvwa
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    networks:
+      - dmz_net
+      - internal_net
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: dvwa
+      MYSQL_USER: dvwa
+      MYSQL_PASSWORD: dvwa
+    networks:
+      - internal_net
+
+  attacker:
+    image: ubuntu:20.04
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    networks:
+      - external_net
+
+  firewall:
+    image: alpine
+    command: sh -c "while true; do sleep 3600; done"
+    networks:
+      - external_net
+      - dmz_net
+
+networks:
+  external_net:
+  dmz_net:
+  internal_net:
