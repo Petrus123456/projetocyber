@@ -165,13 +165,12 @@ podman-compose down
 
 ## 📌 Observações
 
-Este projeto é destinado para fins educacionais e não deve ser exposto à internet pública.
 
 ---
 
 ## 👨‍💻 Autor
 
-Projeto desenvolvido para disciplina de Redes e Segurança.
+Projeto desenvolvido para disciplina de programação pra redes.
 
 ## 🤝 Colaboradores
 
