@@ -1,184 +1,96 @@
-# 🔐 Projeto Cyber Lab (IaC com Podman)
+# 🔐 Projeto Cyber Lab  
+### Laboratório de Redes e Segurança com Podman e IaC
 
 ## 📌 Visão Geral
 
-Este projeto implementa um laboratório de Redes e Segurança da Informação utilizando containers e Infrastructure as Code (IaC).
+O Projeto Cyber Lab é um laboratório acadêmico desenvolvido com foco em Redes de Computadores, Segurança da Informação e Infrastructure as Code (IaC).
 
-O ambiente simula um cenário real com:
+O ambiente simula uma infraestrutura segmentada contendo:
 
-* Aplicação vulnerável (DVWA)
-* Banco de dados isolado
-* Máquina atacante
-* Segmentação de rede (External / DMZ / Internal)
-* Controle de acesso (Firewall conceitual)
+- Aplicação web vulnerável (DVWA)
+- Banco de dados MySQL
+- Host atacante
+- Firewall Linux com iptables
+- Segmentação de rede (External / DMZ / Internal)
 
----
-
-## 🏗️ Arquitetura
-
-O ambiente é dividido em três zonas:
-
-* **External Network** → Usuários e atacante
-* **DMZ** → Aplicação web (DVWA)
-* **Internal Network** → Banco de dados (MySQL)
-
-### 🔒 Regras de Segurança
-
-* Users → DVWA ✔ permitido
-* Attacker → DVWA ❌ bloqueado
-* Attacker → Database ❌ bloqueado
-* DVWA → Database ✔ permitido
+O projeto foi desenvolvido utilizando containers Podman e orquestração com Podman Compose.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+# 🏗️ Arquitetura da Infraestrutura
 
-| Tecnologia     | Função               |
-| -------------- | -------------------- |
-| Podman         | Containers           |
-| Podman Compose | Orquestração         |
-| Ubuntu         | Base dos containers  |
-| DVWA           | Aplicação vulnerável |
-| MySQL          | Banco de dados       |
+![Arquitetura](diagrams/arquitetura.png)
+
+A infraestrutura foi segmentada em três zonas principais:
+
+| Zona | Descrição |
+|---|---|
+| External Network | Simula internet e hosts externos |
+| DMZ Network | Contém a aplicação DVWA |
+| Internal Network | Contém o banco de dados MySQL |
 
 ---
 
-## 📂 Estrutura do Projeto
+# 🔒 Regras de Segurança
 
-```
+A arquitetura implementa conceitos básicos de segurança defensiva:
+
+- Users → DVWA ✔ permitido
+- DVWA → Database ✔ permitido
+- Segmentação lógica entre redes
+- Isolamento do banco de dados
+- Controle de acesso utilizando iptables
+- Aplicação do princípio do menor privilégio
+
+---
+
+# 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Função |
+|---|---|
+| Podman | Containerização |
+| Podman Compose | Orquestração |
+| Ubuntu | Base dos containers |
+| DVWA | Aplicação vulnerável |
+| MySQL 5.7 | Banco de dados |
+| iptables | Controle de acesso |
+| Linux Networking | Segmentação de rede |
+
+# 📂 Estrutura do Projeto
+
+```text
 projeto-cyber/
+│
+├── docs/
+│   └── explicacao.md
+│
+├── diagrams/
+│   └── arquitetura.png
+│
+├── scripts/
+│   └── test.sh
 │
 ├── podman-compose.yml
 ├── setup.sh
-├── README.md
-└── diagrams/
-    └── arquitetura.png
+└── README.md
 ```
-
----
-
-## ⚙️ Pré-requisitos
-
-### 💻 Hardware
-
-* CPU: 2 cores (mínimo)
-* RAM: 4 GB (mínimo)
-* Disco: 10 GB livres
-
-### 🖥️ Software
-
-* Ubuntu 20.04+ ou WSL2
-* Podman
-* Python3 + pip
-
----
-
-## 🚀 Como Executar
-
-```bash
-git clone <repo>
-cd projeto-cyber
-chmod +x setup.sh
-./setup.sh
-```
-
----
-
-## 🌐 Acesso
-
-```
-http://localhost:8080
-```
-
-Login:
-
-* user: admin
-* senha: password
-
----
-
-## 🧪 Testes
-
-### Acesso pelo atacante (deve falhar)
-
-```bash
-curl http://dvwa
-```
-
----
-
-### Acesso pelo navegador (deve funcionar)
-
-Abrir:
-
-```
-http://localhost:8080
-```
-
----
-
-### Acesso ao banco (deve falhar)
-
-```bash
-mysql -h db -u dvwa -p
-```
-
----
-
-## ⚠️ Vulnerabilidade Inicial
-
-Na arquitetura inicial, o atacante conseguia acessar diretamente o banco.
-
-Após a segmentação:
-
-* acesso foi bloqueado
-* rede isolada corretamente
-
----
-
-## 🔒 Melhorias Implementadas
-
-* Segmentação de rede
-* Isolamento do atacante
-* Separação em zonas (DMZ)
-* Controle de acesso via firewall (conceitual)
-* Base para firewall real (iptables)
-
----
-
-## 🧠 Conceitos Aplicados
-
-* Infrastructure as Code (IaC)
-* Network Segmentation
-* Defense in Depth
-* Principle of Least Privilege
-
----
-
-## 🧹 Parar o Ambiente
-
-```bash
-podman-compose down
-```
-
----
-
-## 📌 Observações
-
 
 ---
 
 ## 👨‍💻 Autor
 
-Projeto desenvolvido para disciplina de programação pra redes.
+Projeto desenvolvido para disciplina de Programação para Redes.
+
+---
 
 ## 🤝 Colaboradores
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 <table>
+  <tr>
     <td align="center">
-      <a href="#" title="defina o título do link">
+      <a href="https://github.com/edudsprado">
         <img src="https://avatars.githubusercontent.com/u/203672299?v=4" width="100px;" alt="Eduardo Prado"/><br>
         <sub>
           <b>Eduardo Prado</b>
@@ -186,18 +98,25 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
       </a>
     </td>
     <td align="center">
-      <a href="https://github.com/Petrus123456" title="Perfil Pedro">
+      <a href="https://github.com/Petrus123456">
         <img src="https://avatars.githubusercontent.com/u/276006314?v=4" width="100px;" alt="Pedro Brito"/><br>
         <sub>
           <b>Pedro Brito</b>
         </sub>
       </a>
     </td>
+
   </tr>
 </table>
 
-
+---
 
 ## 📝 Licença
 
-/*Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+Este projeto foi desenvolvido para fins acadêmicos e educacionais.
+
+---
+
+## 📝 Licença
+
+Este projeto foi desenvolvido para fins acadêmicos e educacionais.
