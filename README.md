@@ -56,7 +56,6 @@ A arquitetura implementa conceitos básicos de segurança defensiva:
 | iptables | Controle de acesso |
 | Linux Networking | Segmentação de rede |
 
----
 # 📂 Estrutura do Projeto
 
 ```text
@@ -90,7 +89,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 <table>
   <tr>
-
     <td align="center">
       <a href="https://github.com/edudsprado">
         <img src="https://avatars.githubusercontent.com/u/203672299?v=4" width="100px;" alt="Eduardo Prado"/><br>
@@ -99,7 +97,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         </sub>
       </a>
     </td>
-
     <td align="center">
       <a href="https://github.com/Petrus123456">
         <img src="https://avatars.githubusercontent.com/u/276006314?v=4" width="100px;" alt="Pedro Brito"/><br>
@@ -111,6 +108,12 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
   </tr>
 </table>
+
+---
+
+## 📝 Licença
+
+Este projeto foi desenvolvido para fins acadêmicos e educacionais.
 
 ---
 
