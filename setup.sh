@@ -1,31 +1,48 @@
 #!/bin/bash
 
-echo "🚀 Iniciando setup do Cyber Lab..."
+echo "========================================="
+echo " PROJETO CYBER LAB - SETUP AUTOMATICO"
+echo "========================================="
 
-# Atualizar sistema
-echo "🔄 Atualizando pacotes..."
+sleep 2
+
+echo "[+] Atualizando pacotes..."
 sudo apt update -y
 
-# Instalar dependências básicas
-echo "📦 Instalando dependências..."
-sudo apt install -y podman python3 python3-pip curl
+echo "[+] Verificando Podman..."
 
-# Instalar podman-compose
-echo "⚙️ Instalando podman-compose..."
-pip3 install podman-compose
+if ! command -v podman &> /dev/null
+then
+    echo "[!] Podman nao encontrado. Instalando..."
+    sudo apt install -y podman
+else
+    echo "[OK] Podman ja instalado."
+fi
 
-# Verificar instalações
-echo "🔍 Verificando instalações..."
-podman --version
-podman-compose --version
+echo "[+] Verificando podman-compose..."
 
-# Subir ambiente
-echo "🚀 Subindo containers..."
+if ! command -v podman-compose &> /dev/null
+then
+    echo "[!] podman-compose nao encontrado. Instalando..."
+    sudo apt install -y podman-compose
+else
+    echo "[OK] podman-compose ja instalado."
+fi
+
+echo "[+] Subindo containers..."
 podman-compose up -d
 
-echo "⏳ Aguarde alguns segundos para inicialização..."
+sleep 5
 
-# Mensagem final
-echo "✅ Ambiente pronto!"
-echo "🌐 Acesse: http://localhost:8080"
-echo "🔐 Login: admin / password"
+echo "[+] Containers ativos:"
+podman ps
+
+echo ""
+echo "========================================="
+echo " LABORATORIO INICIADO COM SUCESSO"
+echo "========================================="
+echo ""
+echo "DVWA:"
+echo "http://localhost:8080"
+echo ""
+echo "Use CTRL+C para sair."
