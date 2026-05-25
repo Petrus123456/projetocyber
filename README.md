@@ -57,7 +57,6 @@ A arquitetura implementa conceitos básicos de segurança defensiva:
 | Linux Networking | Segmentação de rede |
 
 ---
-
 # 📂 Estrutura do Projeto
 
 ```text
@@ -77,6 +76,8 @@ projeto-cyber/
 └── README.md
 ```
 
+---
+
 ## 👨‍💻 Autor
 
 Projeto desenvolvido para disciplina de Programação para Redes.
@@ -89,7 +90,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 <table>
   <tr>
-  
+
     <td align="center">
       <a href="https://github.com/edudsprado">
         <img src="https://avatars.githubusercontent.com/u/203672299?v=4" width="100px;" alt="Eduardo Prado"/><br>
