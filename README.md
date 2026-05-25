@@ -78,34 +78,40 @@ projeto-cyber/
 
 ## 👨‍💻 Autor
 
-Projeto desenvolvido para disciplina de programação pra redes.
+Projeto desenvolvido para disciplina de Programação para Redes.
+
+---
 
 ## 🤝 Colaboradores
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
 <table>
+  <tr>
+  
     <td align="center">
-      <a href="#" title="defina o título do link">
+      <a href="https://github.com/edudsprado">
         <img src="https://avatars.githubusercontent.com/u/203672299?v=4" width="100px;" alt="Eduardo Prado"/><br>
         <sub>
           <b>Eduardo Prado</b>
         </sub>
       </a>
     </td>
+
     <td align="center">
-      <a href="https://github.com/Petrus123456" title="Perfil Pedro">
+      <a href="https://github.com/Petrus123456">
         <img src="https://avatars.githubusercontent.com/u/276006314?v=4" width="100px;" alt="Pedro Brito"/><br>
         <sub>
           <b>Pedro Brito</b>
         </sub>
       </a>
     </td>
+
   </tr>
 </table>
 
-
+---
 
 ## 📝 Licença
 
-/*Esse projeto está sob licença. Veja o arquivo [LICENÇA](LICENSE.md) para mais detalhes.
+Este projeto foi desenvolvido para fins acadêmicos e educacionais.
