@@ -28,6 +28,8 @@ O ambiente é dividido em três zonas:
 | DMZ | Contém a aplicação DVWA |
 | Rede Interna | Contém o banco de dados MySQL |
 
+<img src="arquitetura.jpeg"><br>
+
 ### 🔒 Regras de Segurança
 
 |Origem   || Serviço  ||  Resultado|
