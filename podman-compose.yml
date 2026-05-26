@@ -13,7 +13,7 @@ services:
       internal_net:
 
   dvwa:
-    image: vulnerables/web-dvwa
+    image: docker.io/vulnerables/web-dvwa
     container_name: dvwa
     ports:
       - "8080:80"
@@ -24,7 +24,7 @@ services:
       - dmz_net
 
   db:
-    image: mysql:5.7
+    image: docker.io/library/mysql:5.7
     container_name: db
     environment:
       MYSQL_ROOT_PASSWORD: root
