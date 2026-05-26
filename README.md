@@ -50,6 +50,7 @@ O ambiente é dividido em três zonas:
 | Ubuntu         | Base dos containers  |
 | DVWA           | Aplicação vulnerável |
 | MySQL          | Banco de dados       |
+| FW (iptables)  | Proteger a aplicação |
 
 ---
 
@@ -86,7 +87,17 @@ projetocyber/
 ---
 
 ## 🚀 Como Executar
+### Passo 1
 
+**No Windows**, no iniciar, pesquise WSL e execute-o.
+Caso não o encontre, faça o download em:
+
+```
+https://ubuntu.com/download/wsl/thank-you?version=26.04&architecture=amd64
+```
+**No Linux**, abra o terminal.
+
+### Passo 2
 ```bash
 git clone https://github.com/Petrus123456/projetocyber
 cd projetocyber
