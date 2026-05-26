@@ -58,8 +58,10 @@ O ambiente é dividido em três zonas:
 ```
 projetocyber/
 │
+├── arquitetura.jpeg
 ├── podman-compose.yml
 └── setup.sh
+
 ```
 
 ---
@@ -183,7 +185,7 @@ podman-compose down
 <table>
     <td align="center">
       <a href="#" title="defina o título do link">
-        <img src="https://avatars.githubusercontent.com/u/203672299?v=4" width="100px;" alt="Eduardo Prado"/><br>
+        <img src="https://avatars.githubusercontent.com/u/203672299?v=4" width="200px;" alt="Eduardo Prado"/><br>
         <sub>
           <b>Eduardo Prado</b>
         </sub>
@@ -191,7 +193,7 @@ podman-compose down
     </td>
     <td align="center">
       <a href="https://github.com/Petrus123456" title="Perfil Pedro">
-        <img src="https://avatars.githubusercontent.com/u/276006314?v=4" width="100px;" alt="Pedro Brito"/><br>
+        <img src="https://avatars.githubusercontent.com/u/276006314?v=4" width="200px;" alt="Pedro Brito"/><br>
         <sub>
           <b>Pedro Brito</b>
         </sub>
