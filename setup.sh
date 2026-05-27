@@ -37,6 +37,18 @@ sleep 5
 echo "[+] Containers ativos:"
 podman ps
 
+
+echo ""
+echo "[+] Instalando ferramentas nos containers..."
+
+podman exec attacker apt update -y
+podman exec attacker apt install -y iputils-ping curl netcat-openbsd
+
+podman exec firewall apt update -y
+podman exec firewall apt install -y iptables iputils-ping
+
+echo "[OK] Ferramentas instaladas."
+
 echo ""
 echo "========================================="
 echo " LABORATORIO INICIADO COM SUCESSO"
