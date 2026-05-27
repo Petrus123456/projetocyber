@@ -29,6 +29,14 @@ else
     echo "[OK] podman-compose ja instalado."
 fi
 
+if ! command -v mysql-client-core-8.0 &> /dev/null
+then
+    echo "[!] Mysql Client nao encontrado. Instalando..."
+    sudo apt install -y mysql-client-core-8.0
+else
+    echo "[OK] Mysql Client ja instalado."
+fi
+
 echo "[+] Subindo containers..."
 podman-compose up -d
 
