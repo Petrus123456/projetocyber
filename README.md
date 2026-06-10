@@ -82,7 +82,7 @@ projetocyber/
 | SO     |   CPU    | RAM   | Disco|
 |--------| -------- | ------| ---- |
 | POP-OS (Ubuntu) | i5-8256U | 16 GB | 1TB  |
-| WIN 11 |          |16 GB  | 1TB  |
+| WIN 11 | i7-11390H         |16 GB  | 1TB  |
 
 ---
 
@@ -148,6 +148,14 @@ mysql -h db -u dvwa -p
 
 ---
 
+## 🧹 Parar o Ambiente
+
+```bash
+podman-compose down
+```
+
+---
+
 ## ⚠️ Vulnerabilidade Inicial
 
 Na arquitetura inicial, o atacante conseguirá acessar diretamente o banco.
@@ -171,18 +179,10 @@ Após a segmentação:
 
 ## 🧠 Conceitos Aplicados
 
-* Infrastructure as Code (IaC)
-* Network Segmentation
-* Defense in Depth
-* Principle of Least Privilege
-
----
-
-## 🧹 Parar o Ambiente
-
-```bash
-podman-compose down
-```
+* Infraestrutura de Código (IaC)
+* "Segmentação da rede"
+* Defesa em profundidade
+* Princípio do Ultimo Privilégio
 
 ---
 
