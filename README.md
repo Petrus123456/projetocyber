@@ -57,12 +57,13 @@ O ambiente é dividido em três zonas:
 ## 📂 Estrutura do Projeto
 
 ```
-projetocyber/
+projeto-cyber/
 │
-├── arquitetura.jpeg
 ├── podman-compose.yml
-└── setup.sh
-└── teste.sh
+├── setup.sh          # Sobe o ambiente e configura tudo
+├── firewall.sh       # Aplica regras iptables
+├── test.sh           # Executa os testes
+└── README.md
 
 
 
