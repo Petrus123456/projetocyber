@@ -6,44 +6,66 @@ services:
     image: ubuntu:20.04
     container_name: firewall
     privileged: true
+    stdin_open: true
+    tty: true
     command: sleep infinity
     networks:
       external_net:
-      dmz_net:
-      internal_net:
-
-  dvwa:
-    image: docker.io/vulnerables/web-dvwa
-    container_name: dvwa
-    ports:
-      - "8080:80"
-    depends_on:
-      - firewall
-      - db
-    networks:
-      - dmz_net
+        ipv4_address: 10.10.10.254
 
   db:
     image: docker.io/library/mysql:5.7
     container_name: db
+    privileged: true
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: dvwa
       MYSQL_USER: dvwa
       MYSQL_PASSWORD: dvwa
     networks:
-      - internal_net
+      internal_net:
+        ipv4_address: 10.10.30.10
 
   attacker:
     image: ubuntu:20.04
     container_name: attacker
+    privileged: true
     stdin_open: true
     tty: true
-    command: /bin/bash
+    command: sleep infinity
     networks:
-      - external_net
+      external_net:
+        ipv4_address: 10.10.10.10
+
+  dvwa:
+    image: docker.io/vulnerables/web-dvwa
+    container_name: dvwa
+    privileged: true
+    ports:
+      - "8080:80"
+    depends_on:
+      - firewall
+      - db
+    networks:
+      dmz_net:
+        ipv4_address: 10.10.20.10
 
 networks:
+
   external_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.10.0/24
+
   dmz_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.20.0/24
+
   internal_net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.10.30.0/24
