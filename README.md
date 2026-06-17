@@ -14,7 +14,7 @@ O ambiente simula um cenário real com:
 * Banco de dados isolado
 * Máquina atacante
 * Segmentação de rede (External / DMZ / Internal)
-* Controle de acesso (Firewall conceitual)
+* Controle de acesso (Firewall)
 
 ---
 
@@ -57,12 +57,13 @@ O ambiente é dividido em três zonas:
 ## 📂 Estrutura do Projeto
 
 ```
-projetocyber/
+projeto-cyber/
 │
-├── arquitetura.jpeg
 ├── podman-compose.yml
-└── setup.sh
-└── teste.sh
+├── setup.sh          # Sobe o ambiente e configura tudo
+├── firewall.sh       # Aplica regras iptables
+├── test.sh           # Executa os testes
+└── README.md
 
 
 
@@ -85,7 +86,7 @@ projetocyber/
 | SO     |   CPU    | RAM   | Disco|
 |--------| -------- | ------| ---- |
 | POP-OS (Ubuntu) | i5-8256U | 16 GB | 1TB  |
-| WIN 11 | i7-11390H         |16 GB  | 1TB  |
+| WIN 11 |i7-11390H |16 GB  | 1TB  |
 
 ---
 
@@ -157,16 +158,6 @@ mysql -h db -u dvwa -p
 podman-compose down
 ```
 
----
-
-## ⚠️ Vulnerabilidade Inicial
-
-Na arquitetura inicial, o atacante conseguirá acessar diretamente o banco.
-
-Após a segmentação:
-
-* acesso foi bloqueado
-* rede isolada corretamente
 
 ---
 
