@@ -390,25 +390,3 @@ O objetivo do projeto não é explorar a aplicação, mas demonstrar conceitos d
     </td>
   </tr>
 </table>
-
-## 👨‍💻 Autores do Projeto
-
-<table>
-    <td align="center">
-      <a href="#" title="defina o título do link">
-        <img src="https://avatars.githubusercontent.com/u/203672299?v=4" width="200px;" alt="Eduardo Prado"/><br>
-        <sub>
-          <b>Eduardo Prado</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://github.com/Petrus123456" title="Perfil Pedro">
-        <img src="https://avatars.githubusercontent.com/u/276006314?v=4" width="200px;" alt="Pedro Brito"/><br>
-        <sub>
-          <b>Pedro Brito</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
-</table>
