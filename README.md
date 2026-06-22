@@ -33,7 +33,7 @@ O ambiente é dividido em três zonas principais:
 | DMZ          | Contém a aplicação vulnerável DVWA                      |
 | Rede Interna | Contém o banco de dados MySQL                           |
 
-<img src="arquitetura.jpeg"><br>
+<img src="arquitera.jpeg"><br>
 
 ---
 
